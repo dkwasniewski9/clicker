@@ -6,5 +6,4 @@ function sasinPerSecond() {
     .toFixed(2)
     .toString();
   ++time;
-  console.log(time);
 }
