@@ -1,15 +1,12 @@
-import './style.css'
+import "./style.css";
 
-document.querySelector('#app').innerHTML = `
+document.querySelector("#app").innerHTML = `
   <div>
-    <h1>Hello Vite!</h1>
+    <h1>Sasin clicker</h1>
+    <p>Masz aktualnie <b id="balance"> 0</b> sasinow</p>
+    <p>Sasiny na sekunde: <b id="perSecond">0</b></p>
     <div class="card">
-      <button id="counter" type="button"></button>
+      <img src="/src/images/sasin.png" alt="banknot" onclick="counter()"> 
     </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
   </div>
-`
-
-setupCounter(document.querySelector('#counter'))
+`;
