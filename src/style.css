@@ -1,96 +1,156 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+    color-scheme: light dark;
+    color: #23856D;
+    background-color: #23856D;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 18px;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+header {
+    background-color: #FAF8F8;
+    position: absolute;
+    top: 0;
+    left: 200px;
+    right: 200px;
+    min-height: 100px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border: 4px solid #BB010B;
+    border-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px 15px 15px;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.score-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+.score-section span {
+    font-weight: bold;
 }
 
-.card {
-  padding: 2em;
+
+.gingerbread-man {
+    width: 180px;
+    height: 200px;
 }
 
-.read-the-docs {
-  color: #888;
+.title-header {
+    text-align: center;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.score-header {
+    font-size: 1.6rem;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.button-clicker {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.button-clicker:hover {
+    transform: scale(1.05);
+}
+
+main {
+    background-color: #FAF8F8;
+    min-height: 400px;
+    position: absolute;
+    left: 50px;
+    right: 50px;
+    bottom: 0;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border: 4px solid #BB010B;
+    border-bottom: 0;
+    display: flex;
+    align-items: center;
+    padding: 20px 15px;
+}
+
+.upgrades {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.upgrade {
+    color: inherit;
+    background-color: inherit;
+    cursor: pointer;
+    width: 45%;
+    height: 100px;
+    border: 2px solid #BB010B;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    gap: 20px
+}
+
+.upgrade:disabled {
+    border-color: gray;
+    color: gray;
+    cursor: auto;
+}
+
+.upgrade:disabled:hover {
+    border-width: 2px;
+}
+
+.upgrade:hover {
+    border-width: 3px;
+}
+
+.upgrade img {
+    height: 100%;
+    align-self: flex-start;
+}
+
+.upgrade p {
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+}
+
+.upgrade-info {
+    width: 100%;
+    text-align: center;
+}
+
+.upgrade-info h3 {
+    font-size: 1.2rem;
+    margin: 0;
 }

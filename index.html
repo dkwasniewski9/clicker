@@ -1,14 +1,73 @@
 <!doctype html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sasin clicker</title>
+    <title>Świąteczny clicker</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-    <script type="module" src="/src/counter.js"></script>y
-    <script type="module" src="/src/cookiesPerSecond.js" defer></script>
+  <header>
+    <h1 class="title-header">Świąteczny clicker</h1>
+    <section class="score-section">
+        <button id="img" class="button-clicker">
+          <img class="gingerbread-man" src="public/gingerbread_man.png" alt="piernik">
+        </button>
+      <div>
+        <p>Łącznie pierników: <span id="balance"> 0</span></p>
+        <p>Pierników na sekunde: <span id="perSecond">0</span></p>
+        <p>Pierników na klikniecie: <span id="perClick">1</span></p>
+      </div>
+    </section>
+  </header>
+  <main>
+    <section class="upgrades">
+      <button type="button" class="upgrade" id="elf">
+        <img src="public/elf.png" alt="elf">
+        <div class="upgrade-info">
+          <p>Nowy elf pomocnik</p>
+          <p>Poziom: <span id="elfLevel">0</span></p>
+          <p>Koszt: 15</p>
+          <p>+1 /sek</p>
+        </div>
+      </button>
+      <button type="button"  class="upgrade" id="deer">
+        <img src="public/deer.png" alt="elf">
+        <div class="upgrade-info">
+          <p>Dodatkowy renifer</p>
+          <p>Poziom:  <span id="deerLevel">0</span></p>
+          <p>Koszt: 50</p>
+          <p>+5 /sek</p>
+        </div>
+      </button>
+      <button type="button" class="upgrade" id="santa">
+        <img src="public/santa-claus-sled.png" alt="elf">
+        <div class="upgrade-info">
+          <p>Ulepszone sanie</p>
+          <p>Poziom:  <span id="santaLevel">0</span></p>
+          <p>Koszt: 150</p>
+          <p>+10 /sek</p>
+        </div>
+      </button>
+      <button type="button" class="upgrade" id="factory">
+        <img src="public/factory.png" alt="elf">
+        <div class="upgrade-info">
+          <p>Nowa fabryka prezentów</p>
+          <p>Poziom:  <span id="factoryLevel">0</span></p>
+          <p>Koszt: 300</p>
+          <p>+20 /sek</p>
+        </div>
+      </button>
+      <button type="button" class="upgrade" id="box">
+        <img src="public/open-box.png" alt="elf">
+        <div class="upgrade-info">
+          <p>Świąteczny paczkomat</p>
+          <p>Poziom:  <span id="boxLevel">0</span></p>
+          <p>Koszt: 1000</p>
+          <p>+30 /sek</p>
+        </div>
+      </button>
+    </section>
+  </main>
+  <script type="module" src="/src/main.js"></script>
   </body>
 </html>
